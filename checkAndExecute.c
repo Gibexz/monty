@@ -34,7 +34,7 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 	}
 	if (op && opArray[i].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s", count, op);
+		fprintf(stderr, "L%d: unknown instruction %s\n", count, op);
 		fclose(file);
 		free(content);
 		freeStack(*stack);
