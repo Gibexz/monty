@@ -22,7 +22,7 @@ void _push(stack_t **head, unsigned int count)
 		}
 		if (flag == 1)
 		{
-			fprintf(stderr, "L%d: usage: push integer", count);
+			fprintf(stderr, "L%d: usage: push integeri\n", count);
 			fclose(global.file);
 			free(global.content);
 			freeStack(*head);
@@ -31,7 +31,7 @@ void _push(stack_t **head, unsigned int count)
 	}
 	else
 	{
-		fprintf(stderr, "L%d: usage: push integer", count);
+		fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(global.file);
 		free(global.content);
 		freeStack(*head);
