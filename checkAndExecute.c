@@ -15,7 +15,8 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 	unsigned int i = 0; /* for looping through the opcodes array */
 	instruction_t opArray[] = {/* keywords and respective functions */
 					{"push", _push}, {"pall", _pall}, {"pint", _pint},
-					{"pop", _pop}, {"swap", _swap}, {"add", _add}, {NULL, NULL}
+					{"pop", _pop}, {"swap", _swap}, {"add", _add},
+					{"nop", _nop}, {{NULL, NULL}
 				 };
 
 	op = strtok(content, " \n\t");
