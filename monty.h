@@ -67,5 +67,6 @@ void addnode(stack_t **head, int n);
 
 void _push(stack_t **head, unsigned int count);
 void _pall(stack_t **head, unsigned int count);
+void _pint(stack_t **head, unsigned int count);
 
 #endif
