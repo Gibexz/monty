@@ -39,5 +39,5 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 		freeStack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	return(1);
+	return (1);
 }
