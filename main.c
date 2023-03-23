@@ -1,7 +1,5 @@
 #include "monty.h"
-
-prop_t global = {NULL, NULL, NULL};
-
+prop_t global = {NULL, NULL, NULL, 0};
 /**
  * main - monty code interpreter entry point
  * @argc: num. of arguments to main
@@ -12,12 +10,12 @@ prop_t global = {NULL, NULL, NULL};
  */
 int main(int argc, char *argv[])
 {
-	unsigned int count = 0;
-	FILE *file;
 	char *content;
-	size_t bufsize = 0;
-	ssize_t check = 1;
+	FILE *file;
+	size_t buff = 0;
+	ssize_t read_check = 1;
 	stack_t *stack = NULL;
+	unsigned int count = 0;
 
 	if (argc != 2)
 	{
@@ -31,14 +29,16 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (check > 0)
+	while (read_check > 0)
 	{
 		content = NULL;
-		check = getline(&content, &bufsize, file);
+		read_check = getline(&content, &buff, file);
 		global.content = content;
 		count++;
-		if (check > 0)
+		if (read_check > 0)
+		{
 			checkNexec(&stack, content, count, file);
+		}
 		free(content);
 	}
 	freeStack(stack);

@@ -13,6 +13,8 @@ void _push(stack_t **head, unsigned int count)
 
 	if (global.arg)
 	{
+		if (global.arg[0] == '-')
+			j++;
 		for (; global.arg[j] != '\0'; j++)
 		{
 			if (global.arg[j] > 57 || global.arg[j] < 48)
@@ -36,6 +38,7 @@ void _push(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(global.arg);
-	addnode(head, n);
+	if (global.lifi == 0)
+		addnode(head, n);
 
 }

@@ -18,6 +18,8 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 				 };
 
 	op = strtok(content, " \n\t");
+	if (op && op[0] == '#')
+		return (0);
 	global.arg = strtok(NULL, " \n\t");
 
 	while (op && opArray[i].opcode)

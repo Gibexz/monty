@@ -1,7 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,7 +47,7 @@ typedef struct instruction_s
  * in a file (if any)
  * @file: to point to the monty bytcode file.
  * @content: The complete line of bytecode
- *
+ * @lifi: check for swapping between stack and queue
  * Description: for declaring a global variable
  */
 typedef struct prop_s
@@ -56,6 +55,7 @@ typedef struct prop_s
 	char *arg;
 	FILE *file;
 	char *content;
+	int lifi;
 } prop_t;
 extern prop_t global;
 
