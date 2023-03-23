@@ -70,6 +70,7 @@ void _pall(stack_t **head, unsigned int count);
 void _pint(stack_t **head, unsigned int count);
 void _pop(stack_t **head, unsigned int count);
 void _swap(stack_t **head, unsigned int count);
+void _add(stack_t **head, unsigned int count);
 
 
 #endif
