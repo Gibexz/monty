@@ -9,7 +9,7 @@
  */
 void _sub(stack_t **head, unsigned int count)
 {
-	stack_t *tvoid _sub(stack_t **head, unsigned int count)emp;
+	stack_t *temp;
 	int value;
 
 	if (!(*head) || !(*head)->next)
