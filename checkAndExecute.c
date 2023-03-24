@@ -16,7 +16,7 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 	instruction_t opArray[] = {/* keywords and respective functions */
 					{"push", _push}, {"pall", _pall}, {"pint", _pint},
 					{"pop", _pop}, {"swap", _swap}, {"add", _add},
-					{"nop", _nop}, {NULL, NULL}
+					{"nop", _nop}, {"sub", _sub}, {NULL, NULL}
 				 };
 
 	op = strtok(content, " \n\t");
