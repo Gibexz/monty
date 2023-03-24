@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pchar - add the top two elements of the stack
+ * _pchar -  prints the char at the top of the stack
  * @head: head of the stack
  * @count: line_number
  *

@@ -18,7 +18,7 @@ int checkNexec(stack_t **stack, char *content, unsigned int count, FILE *file)
 					{"pop", _pop}, {"swap", _swap}, {"add", _add},
 					{"nop", _nop}, {"sub", _sub}, {"div", _div},
 					{"mul", _mul}, {"mod", _mod}, {"pchar", _pchar},
-					{NULL, NULL}
+					{"pstr", _pstr}, {NULL, NULL}
 				 };
 
 	op = strtok(content, " \n\t");
