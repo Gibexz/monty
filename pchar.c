@@ -13,7 +13,7 @@ void _pchar(stack_t **head, unsigned int count)
 
 	if (!(*head))
 	{
-		fprintf(stderr, "L%u: can't pchar, stack too short\n", count);
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", count);
 		freeStack(*head);
 		exit(EXIT_FAILURE);
 	}
