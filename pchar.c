@@ -1,0 +1,32 @@
+#include "monty.h"
+
+/**
+ * _pchar - add the top two elements of the stack
+ * @head: head of the stack
+ * @count: line_number
+ *
+ * Return: Nothing
+ */
+void _pchar(stack_t **head, unsigned int count)
+{
+	int value;
+
+	if (!(*head))
+	{
+		fprintf(stderr, "L%u: can't pchar, stack too short\n", count);
+		freeStack(*head);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		value = (*head)->n;
+		if (value > 126 || value < 32)
+		{
+			fprintf(stderr, "L%u: can't pchar, value out of range\n", count);
+			freeStack(*head);
+			exit(EXIT_FAILURE);
+		}
+		else
+			fprintf(stdout, "%c\n", value);
+	}
+}
