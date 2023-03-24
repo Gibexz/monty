@@ -20,7 +20,7 @@ void _pchar(stack_t **head, unsigned int count)
 	else
 	{
 		value = (*head)->n;
-		if (value > 126 || value < 32)
+		if (value > 127 || value < 0)
 		{
 			fprintf(stderr, "L%u: can't pchar, value out of range\n", count);
 			freeStack(*head);
