@@ -32,5 +32,4 @@ void _div(stack_t **head, unsigned int count)
 		(*head)->n = value;
 		free(temp);
 	}
-	
 }

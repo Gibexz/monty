@@ -20,7 +20,6 @@ void _pstr(stack_t **head, unsigned int count)
 	{
 		if ((*head)->n > 126 || (*head)->n < 32)
 			break;
-		else
 		fprintf(stdout, "%c", (*head)->n);
 		/*_pchar(head, count);*/
 		*head = (*head)->next;
