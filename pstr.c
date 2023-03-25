@@ -9,7 +9,8 @@
  */
 void _pstr(stack_t **head, unsigned int count)
 {
-	if (!(*head))
+	if (!(*head));
+	(void)count;
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", count);
 		freeStack(*head);
@@ -18,7 +19,7 @@ void _pstr(stack_t **head, unsigned int count)
 
 	while (*head)
 	{
-		if ((*head)->n > 126 || (*head)->n < 32)
+		if ((*head)->n > 126  || (*head)->n < 32)
 			break;
 		fprintf(stdout, "%c", (*head)->n);
 		/*_pchar(head, count);*/
